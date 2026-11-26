@@ -253,7 +253,7 @@ inline Intersection Triangle::getIntersection(Ray ray)
         return inter;
     t_tmp = dotProduct(e2, qvec) * det_inv;
 
-    // TODO find ray triangle intersection
+    // Möller–Trumbore 已在上方算出 t_tmp/u/v，此处填装结果
 
     if(t_tmp<0)return inter;
     inter.happened = true;
@@ -270,4 +270,5 @@ inline Vector3f Triangle::evalDiffuseColor(const Vector2f&) const
 {
     return Vector3f(0.5, 0.5, 0.5);
 }
+
 

@@ -1,0 +1,3 @@
+/home/lxh/Desktop/4/code/build/CMakeFiles/BezierCurve.dir
+/home/lxh/Desktop/4/code/build/CMakeFiles/edit_cache.dir
+/home/lxh/Desktop/4/code/build/CMakeFiles/rebuild_cache.dir

@@ -109,7 +109,7 @@ Intersection BVHAccel::Intersect(const Ray& ray) const
 
 Intersection BVHAccel::getIntersection(BVHBuildNode* node, const Ray& ray) const
 {
-    // TODO Traverse the BVH to find intersection
+    // 递归遍历 BVH：先测包围盒，命中叶子再求物体精确交点
     Intersection a;
     if(!node) return a;
 
@@ -239,6 +239,7 @@ BVHBuildNode* BVHAccel::recursiveBuildSAH(std::vector<Object*> objects)
     node->area   = node->left->area + node->right->area;
     return node;
 }
+
 
 
 

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/RayTracing.dir/link.d CMakeFiles/RayTracing.dir/main.cpp.o CMakeFiles/RayTracing.dir/Scene.cpp.o CMakeFiles/RayTracing.dir/Renderer.cpp.o -o RayTracing  -fsanitize=undefined

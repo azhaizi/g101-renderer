@@ -1,4 +1,4 @@
-//
+﻿//
 // Created by LEI XU on 5/16/19.
 //
 
@@ -97,7 +97,7 @@ inline bool Bounds3::IntersectP(const Ray& ray, const Vector3f& invDir,
     // use this because Multiply is faster that Division
     // dirIsNeg: ray direction(x,y,z), dirIsNeg=[int(x>0),int(y>0),int(z>0)], 
     // use this to simplify your logic
-    // TODO test if ray bound intersects
+    // slab 法求 ray-AABB 相交：逐轴算 tmin/tmax 并取交集
     float tminx = ((*this)[dirIsNeg[0]].x - ray.origin.x) * invDir.x;
     float tmaxx = ((*this)[1-dirIsNeg[0]].x - ray.origin.x) * invDir.x;
     float tmin = std::min(tminx,tmaxx);
@@ -133,3 +133,4 @@ inline Bounds3 Union(const Bounds3& b, const Vector3f& p)
 }
 
 #endif // RAYTRACING_BOUNDS3_H
+

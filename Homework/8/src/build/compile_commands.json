@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/lxh/Desktop/8/src/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/ropesim.dir/rope.cpp.o -c /home/lxh/Desktop/8/src/rope.cpp",
+  "file": "/home/lxh/Desktop/8/src/rope.cpp",
+  "output": "CMakeFiles/ropesim.dir/rope.cpp.o"
+},
+{
+  "directory": "/home/lxh/Desktop/8/src/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/ropesim.dir/application.cpp.o -c /home/lxh/Desktop/8/src/application.cpp",
+  "file": "/home/lxh/Desktop/8/src/application.cpp",
+  "output": "CMakeFiles/ropesim.dir/application.cpp.o"
+},
+{
+  "directory": "/home/lxh/Desktop/8/src/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/ropesim.dir/main.cpp.o -c /home/lxh/Desktop/8/src/main.cpp",
+  "file": "/home/lxh/Desktop/8/src/main.cpp",
+  "output": "CMakeFiles/ropesim.dir/main.cpp.o"
+}
+]
