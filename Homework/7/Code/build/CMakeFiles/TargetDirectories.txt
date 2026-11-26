@@ -1,3 +1,0 @@
-/home/lxh/Desktop/7/Code/build/CMakeFiles/RayTracing.dir
-/home/lxh/Desktop/7/Code/build/CMakeFiles/edit_cache.dir
-/home/lxh/Desktop/7/Code/build/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,4 @@
-# Games101 汇总
+﻿# Games101 汇总
 
 ## 1. 总体概览
 ### 1.1 项目说明
@@ -7,6 +7,75 @@
 - 其余为个人根据作业构建出来的一个渲染器仓库
 
 ### 1.2目录结构
+
+```text
+Gams101/
+├── CMakeLists.txt              # 唯一构建脚本：5 个静态库 + 1 个可执行
+├── README.md
+├── .gitignore
+│
+├── apps/                       # CLI 层：参数解析 + 各模式入口 + 场景预设
+│   ├── main.cpp                #   --mode 分派、计时、错误处理
+│   ├── apps.hpp                #   run_raster / run_raytrace / run_bezier / run_rope 声明
+│   ├── raster_app.cpp          #   作业 1/2/3：三个矩阵 + 光栅化 + 着色
+│   ├── raytrace_app.cpp        #   作业 5/6/7：相机、spp、depth、BVH 开关
+│   ├── geometry_app.cpp        #   作业 4：贝塞尔控制点
+│   ├── rope_app.cpp            #   作业 8：帧循环、画线、输出帧序列
+│   ├── scene_presets.cpp       #   cornell / bunny 场景构建
+│   └── scene_presets.hpp       #   SceneHandle：场景 + 相机约定
+│
+├── src/
+│   ├── core/                   # 基础设施
+│   │   ├── image.hpp / .cpp    #   图像容器 + PNG 读写（stb）
+│   │   ├── cli.hpp             #   --key value 参数解析
+│   │   ├── timer.hpp           #   计时
+│   │   └── global.hpp          #   全局常量与宏
+│   ├── raster/                 # 光栅化器（作业 1/2/3）
+│   │   ├── rasterizer.hpp/.cpp #   三角形填充、Z-Buffer、SSAA、shader 分发
+│   │   ├── triangle.hpp/.cpp   #   顶点/颜色/UV/法线 + 屏幕空间转换
+│   │   ├── shader.hpp          #   fragment / vertex shader payload
+│   │   └── texture.hpp/.cpp    #   最近邻 + 双线性采样
+│   ├── geometry/               # 曲线（作业 4）
+│   │   └── bezier.hpp/.cpp     #   de Casteljau + 3×3 邻域抗锯齿
+│   ├── raytrace/               # 光线追踪（作业 5/6/7）
+│   │   ├── scene.hpp/.cpp      #   场景、BVH 构建、castRay（路径追踪）
+│   │   ├── bvh.hpp/.cpp        #   NAIVE / SAH 两种划分
+│   │   ├── bounds3.hpp         #   AABB + slab 求交
+│   │   ├── ray.hpp             #   射线
+│   │   ├── triangle.hpp        #   MeshTriangle / Triangle + Möller–Trumbore
+│   │   ├── sphere.hpp          #   球（框架保留，当前场景未用）
+│   │   ├── material.hpp        #   BRDF、采样、pdf、反射/折射
+│   │   ├── integrator.hpp/.cpp #   渲染主循环（spp / gamma / 亚像素抖动）
+│   │   ├── Intersection.hpp    #   交点结构
+│   │   ├── object.hpp          #   Object 基类
+│   │   ├── light.hpp           #   点光源（当前用面光源）
+│   │   └── area_light.hpp      #   面光源
+│   └── physics/                # 绳索模拟（作业 8）
+│       └── rope_sim.hpp/.cpp   #   Mass / Spring / Rope + Euler & Verlet
+│
+├── assets/                     # 资源
+│   ├── bunny/bunny.obj         #   兔子模型
+│   └── models/cornellbox/      #   Cornell Box 的 6 个 obj
+│
+├── results/                    # 渲染产物（按模块归档）
+│   ├── raster/                 #   光栅化
+│   ├── geometry/               #   贝塞尔曲线
+│   ├── raytrace/               #   光线追踪
+│   ├── pathtrace/              #   路径追踪（cornell / bunny）
+│   ├── physics/                #   绳索帧序列 + GIF
+│   └── bench/                  #   对比实验（depth / bvh）
+│
+├── docs/                       # 作业 1~8 文档（1.md ~ 8.md）
+│
+├── Homework/                   # 个人原始作业 1~8（各自独立工程，不参与主构建）
+│
+├── third_party/                # 第三方库（以 header-only 为主）
+│   ├── eigen/                  #   线性代数
+│   ├── stb/                    #   PNG 读写
+│   └── obj_loader/             #   OBJ 解析
+│
+└── build/                      # 构建产物（可随时删除重建）
+```
 
 ## 2. 作业说明
 docs 文件夹中包含对于 games101 8 个作业的说明。 

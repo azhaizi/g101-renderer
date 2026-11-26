@@ -1,1 +1,0 @@
-/usr/bin/g++ -g -Wl,--dependency-file=CMakeFiles/ropesim.dir/link.d CMakeFiles/ropesim.dir/rope.cpp.o CMakeFiles/ropesim.dir/application.cpp.o CMakeFiles/ropesim.dir/main.cpp.o -o /home/lxh/Desktop/8/src/ropesim  -lCGL -lglew -lglfw
