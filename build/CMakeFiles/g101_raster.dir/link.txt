@@ -1,2 +1,0 @@
-C:\MINGW\x86\mingw64\bin\ar.exe qc libg101_raster.a CMakeFiles/g101_raster.dir/src/raster/rasterizer.cpp.obj CMakeFiles/g101_raster.dir/src/raster/texture.cpp.obj CMakeFiles/g101_raster.dir/src/raster/triangle.cpp.obj
-C:\MINGW\x86\mingw64\bin\ranlib.exe libg101_raster.a

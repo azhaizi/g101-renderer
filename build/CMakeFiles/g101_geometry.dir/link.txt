@@ -1,2 +1,0 @@
-C:\MINGW\x86\mingw64\bin\ar.exe qc libg101_geometry.a CMakeFiles/g101_geometry.dir/src/geometry/bezier.cpp.obj
-C:\MINGW\x86\mingw64\bin\ranlib.exe libg101_geometry.a
