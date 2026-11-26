@@ -1,0 +1,8 @@
+C:/Users/15956/Desktop/Gams101/build/CMakeFiles/g101_core.dir
+C:/Users/15956/Desktop/Gams101/build/CMakeFiles/g101_raster.dir
+C:/Users/15956/Desktop/Gams101/build/CMakeFiles/g101_geometry.dir
+C:/Users/15956/Desktop/Gams101/build/CMakeFiles/g101_raytrace.dir
+C:/Users/15956/Desktop/Gams101/build/CMakeFiles/g101_physics.dir
+C:/Users/15956/Desktop/Gams101/build/CMakeFiles/renderer.dir
+C:/Users/15956/Desktop/Gams101/build/CMakeFiles/edit_cache.dir
+C:/Users/15956/Desktop/Gams101/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+C:\MINGW\x86\mingw64\bin\ar.exe qc libg101_physics.a CMakeFiles/g101_physics.dir/src/physics/rope_sim.cpp.obj
+C:\MINGW\x86\mingw64\bin\ranlib.exe libg101_physics.a

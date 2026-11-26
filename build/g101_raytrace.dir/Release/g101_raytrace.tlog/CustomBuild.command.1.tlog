@@ -1,0 +1,10 @@
+^C:\USERS\15956\DESKTOP\GAMS101\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/15956/Desktop/Gams101 -BC:/Users/15956/Desktop/Gams101/build --check-stamp-file C:/Users/15956/Desktop/Gams101/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

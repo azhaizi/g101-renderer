@@ -1,0 +1,2 @@
+C:\MINGW\x86\mingw64\bin\ar.exe qc libg101_core.a CMakeFiles/g101_core.dir/src/core/image.cpp.obj
+C:\MINGW\x86\mingw64\bin\ranlib.exe libg101_core.a
